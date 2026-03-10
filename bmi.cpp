@@ -4,21 +4,21 @@
 using namespace std;
 
 // Prosedur untuk mengambil masukan data
-void masukanData(float &berat, float &tinggi) 
-{
+void masukanData(float &berat, float &tinggi) {
     cout << "Masukkan berat badan (kg): ";
     cin >> berat;
     cout << "Masukkan tinggi badan (meter): ";
     cin >> tinggi;
 }
+
 // Fungsi untuk menghitung nilai BMI
-float hitungBMI(float berat, float tinggi) 
-{
+float hitungBMI(float berat, float tinggi) {
     return berat / (tinggi * tinggi);
 }
-// Fungsi untuk menentukan status berat badanstring cekStatus(float bmi) {
-    if (bmi < 18.5) 
-    {
+
+// Fungsi untuk menentukan status berat badan
+string cekStatus(float bmi) {
+    if (bmi < 18.5) {
         return "Berat Badan Kurang";
     } else if (bmi < 25) {
         return "Berat Badan Normal";
@@ -27,16 +27,25 @@ float hitungBMI(float berat, float tinggi)
     } else {
         return "Obesitas";
     }
+}
 
-    int main() 
-    {
+int main() {
     float berat, tinggi, bmi;
-     // Header sesuai gambar
+
+    // Header sesuai gambar
     cout << "--- Selamat Datang Mahasiswa Kelas A 2025 ---" << endl;
+
     // Memanggil prosedur masukan
     masukanData(berat, tinggi);
+
     // Menghitung BMI menggunakan fungsi
     bmi = hitungBMI(berat, tinggi);
 
-    
-    }
+    // Menampilkan Hasil sesuai format gambar
+    cout << endl;
+    cout << "--- Hasil ---" << endl;
+    cout << "BMI Anda : " << bmi << endl;
+    cout << "Status   : " << cekStatus(bmi) << endl;
+
+    return 0;
+}
