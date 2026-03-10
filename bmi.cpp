@@ -28,4 +28,7 @@ float hitungBMI(float berat, float tinggi)
         return "Obesitas";
     }
 
-
+    int main() 
+    {
+    float berat, tinggi, bmi;
+    }
