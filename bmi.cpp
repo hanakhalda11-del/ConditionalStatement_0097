@@ -35,6 +35,8 @@ float hitungBMI(float berat, float tinggi)
     cout << "--- Selamat Datang Mahasiswa Kelas A 2025 ---" << endl;
     // Memanggil prosedur masukan
     masukanData(berat, tinggi);
+    // Menghitung BMI menggunakan fungsi
+    bmi = hitungBMI(berat, tinggi);
 
     
     }
